@@ -89,11 +89,44 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding-top: 80px;
+  background-image: url('assets/images/hero-jewelry.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh; /* adjust as needed */
+  display: flex;
+  align-items: center;  /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  text-align: center; /* center text inside */
+  position: relative;
+}
+
+/* Optional: overlay for better text contrast */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* tweak opacity */
+}
+
+/* Ensure content sits above overlay */
+.hero .hero-content,
+.hero .hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* If .hero-content previously used row layout, center stack it */
+.hero .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Remove any leftover spacing that assumed an image column */
+.hero .hero-image {
+  display: none;
 }
 
 .hero-content {
