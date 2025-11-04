@@ -158,20 +158,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add loading animation for images
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-        if (!img.classList.contains('no-fade')) {
-            img.addEventListener('load', function() {
-                this.style.opacity = '1';
-                this.style.transform = 'scale(1)';
-            });
-        
-            // Set initial state
-            img.style.opacity = '0';
-            img.style.transform = 'scale(0.95)';
-            img.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        }
-    });
+    // const images = document.querySelectorAll('img');
+    // images.forEach(img => {
+    //     if (!img.classList.contains('no-fade')) {
+    //         img.addEventListener('load', function() {
+    //             this.style.opacity = '1';
+    //             this.style.transform = 'scale(1)';
+    //         });
+    //
+    //         // Set initial state
+    //         img.style.opacity = '0';
+    //         img.style.transform = 'scale(0.95)';
+    //         img.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    //     }
+    // });
 
     // Smooth reveal animation for sections
     const sections = document.querySelectorAll('section');
@@ -187,14 +187,14 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -100px 0px'
     });
 
-    sections.forEach(section => {
-        if (!section.classList.contains('no-reveal')) {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(50px)';
-            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            sectionObserver.observe(section);
-        }
-    });
+    // sections.forEach(section => {
+    //     if (!section.classList.contains('no-reveal')) {
+    //         section.style.opacity = '0';
+    //         section.style.transform = 'translateY(50px)';
+    //         section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    //         sectionObserver.observe(section);
+    //     }
+    // });
 
     // Add CSS keyframes for floating animation
     const style = document.createElement('style');
