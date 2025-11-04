@@ -52,16 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Parallax effect for hero image
-    const heroImage = document.querySelector('.hero-img');
-    if (heroImage) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            heroImage.style.transform = `translateY(${rate}px) scale(1.05)`;
-        });
-    }
-
     // Form submission handling
     const contactForm = document.querySelector('.contact-form-element');
     if (contactForm) {
@@ -170,15 +160,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add loading animation for images
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-            this.style.transform = 'scale(1)';
-        });
+        if (!img.classList.contains('no-fade')) {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+                this.style.transform = 'scale(1)';
+            });
         
-        // Set initial state
-        img.style.opacity = '0';
-        img.style.transform = 'scale(0.95)';
-        img.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            // Set initial state
+            img.style.opacity = '0';
+            img.style.transform = 'scale(0.95)';
+            img.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        }
     });
 
     // Smooth reveal animation for sections
@@ -196,16 +188,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(50px)';
-        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        sectionObserver.observe(section);
-    });
-
-    // Add floating animation to hero elements
-    const heroElements = document.querySelectorAll('.hero-text > *');
-    heroElements.forEach((el, index) => {
-        el.style.animation = `float 6s ease-in-out ${index * 0.5}s infinite`;
+        if (!section.classList.contains('no-reveal')) {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(50px)';
+            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            sectionObserver.observe(section);
+        }
     });
 
     // Add CSS keyframes for floating animation
@@ -281,4 +269,3 @@ if ('ontouchstart' in window) {
     `;
     document.head.appendChild(touchStyle);
 }
-

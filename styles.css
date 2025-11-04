@@ -528,3 +528,11 @@ section {
     }
 }
 
+
+/* Keep hero image visible and not affected by generic image transitions */
+.hero-img,
+.hero-img.no-fade {
+  opacity: 1 !important;
+  transform: none; /* your parallax JS will set transform as needed */
+  transition: none;
+}
