@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', italic;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
@@ -143,21 +143,21 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 700;
-    color: #8B4513;
+    color: #f0f0f0;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .hero-text h2 {
     font-size: 1.8rem;
-    color: #666;
+    color: #f0f0f0;
     margin-bottom: 1.5rem;
     font-weight: 400;
 }
 
 .hero-text p {
     font-size: 1.2rem;
-    color: #777;
+    color: #f0f0f0;
     margin-bottom: 2rem;
     line-height: 1.6;
 }
@@ -369,7 +369,7 @@ section {
     padding: 1rem;
     border: 2px solid #e0e0e0;
     border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', italic;
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
@@ -389,7 +389,7 @@ section {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', italic;
 }
 
 .submit-btn:hover {
