@@ -300,9 +300,13 @@ section {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-info {
+    max-width: 500px;
 }
 
 .contact-info h3 {
@@ -320,21 +324,24 @@ section {
 
 .social-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
+    justify-content: center;
 }
 
 .social-link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 1rem;
+    justify-content: center;
+    padding: 0.5rem;
     background: white;
-    border-radius: 10px;
+    border-radius: 50%;
     text-decoration: none;
     color: #333;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 48px;
+    height: 48px;
 }
 
 .social-link:hover {
@@ -343,8 +350,8 @@ section {
 }
 
 .social-link img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
 }
 
 .telegram:hover {
