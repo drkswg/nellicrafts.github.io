@@ -31,3 +31,6 @@ yarn-error.log
 # Env files
 .env
 .env.*
+
+# LLM files
+CLAUDE.md
