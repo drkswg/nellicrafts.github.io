@@ -34,3 +34,4 @@ yarn-error.log
 
 # LLM files
 CLAUDE.md
+.claude/
