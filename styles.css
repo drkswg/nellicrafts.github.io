@@ -116,27 +116,15 @@ body {
   z-index: 1;
 }
 
-/* If .hero-content previously used row layout, center stack it */
+/* Hero content centered layout */
 .hero .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-}
-
-/* Remove any leftover spacing that assumed an image column */
-.hero .hero-image {
-  display: none;
-}
-
-.hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .hero-text h1 {
@@ -175,24 +163,8 @@ body {
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.05);
     box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
-}
-
-.hero-image {
-    text-align: center;
-}
-
-.hero-img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.hero-img:hover {
-    transform: scale(1.05);
 }
 
 /* Section Styles */
@@ -265,7 +237,7 @@ section {
 }
 
 .jewelry-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px) scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -345,7 +317,7 @@ section {
 }
 
 .social-link:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -362,74 +334,6 @@ section {
 .instagram:hover {
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     color: white;
-}
-
-/* Contact Form */
-.contact-form-element {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact-form-element input,
-.contact-form-element textarea {
-    padding: 1rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    font-family: 'Merriweather', italic;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.contact-form-element input:focus,
-.contact-form-element textarea:focus {
-    outline: none;
-    border-color: #8B4513;
-}
-
-.submit-btn {
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, #8B4513, #A0522D);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Merriweather', italic;
-}
-
-.submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
-}
-
-/* Footer */
-.footer {
-    background: #333;
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-}
-
-.footer-logo img {
-    width: 30px;
-    height: 30px;
 }
 
 /* Animations */
