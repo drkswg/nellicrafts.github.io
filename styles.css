@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Merriweather', italic;
+    font-family: 'Merriweather', italic, serif;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
